@@ -3,7 +3,9 @@ import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
-// Your web app's Firebase configuration
+// This is the standard configuration for a Vite project.
+// It reads variables prefixed with VITE_ from your .env file locally,
+// and from the build environment when deployed.
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
     authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
@@ -13,12 +15,12 @@ const firebaseConfig = {
     appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
-// Initialize Firebase
+// Initialize and export all Firebase services
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 const storage = getStorage(app);
 const googleProvider = new GoogleAuthProvider();
-const appId = import.meta.env.VITE_FIREBASE_APP_ID || 'default-app-id';
+const appId = app.options.appId;
 
 export { auth, db, storage, googleProvider, appId };

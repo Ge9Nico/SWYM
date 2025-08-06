@@ -1,5 +1,6 @@
 import React, { useState, useEffect, createContext, useContext } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
+// THIS IS THE FIX: We now import `auth` as a named export.
 import { auth } from '../firebase';
 
 const AuthContext = createContext();
