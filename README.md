@@ -2,7 +2,7 @@
 
 SWYM is an AI-powered web application that automatically finds, organizes, and explains the hidden benefits and coverage within your insurance policies and credit card documents. Stop leaving money on the table and get clarity on what you own.
 
-
+**Current Version: Alpha Prototype**
 
 ## ✨ Key Features
 
